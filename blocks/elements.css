@@ -1,0 +1,36 @@
+.elements__card {
+  max-height: 361px;
+  max-width: 282px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.elements__image {
+  display: block;
+  max-width: 282px;
+  max-height: 282px;
+}
+
+.elements__card-info {
+  display: flex;
+  margin: 23px 15px 27px 21px;
+  justify-content: space-between;
+}
+
+.elements__text {
+  font-size: 24px;
+  font-style: normal;
+  color: #000;
+  font-weight: 900;
+  line-height: 29px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.elements__like {
+  max-height: 19px;
+  max-width: 21px;
+  align-self: center;
+}
