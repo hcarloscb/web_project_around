@@ -8,19 +8,21 @@
   background-repeat: no-repeat;
 }
 
-.profile__info {
-  align-self: center;
-  margin-left: 30px;
-  margin-right: 165px;
+.profile__avatar-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .profile__container {
   display: flex;
+  align-items: flex-end;
   gap: 18px;
 }
 .profile__name {
   margin: 0;
-  line-height: 48px;
+  line-height: 36px;
+  font-style: normal;
   font-size: 42px;
   font-weight: 500;
 }
@@ -36,7 +38,6 @@
   border: 1px solid #fff;
   height: 22px;
   width: 22px;
-  align-self: center;
   background-image: url(../images/profile__edit-pencil.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -45,7 +46,6 @@
 .profile__button {
   margin: 0;
   max-height: 50px;
-  align-self: center;
 }
 
 .profile__add-button {
