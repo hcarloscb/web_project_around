@@ -15,6 +15,12 @@
 }
 
 @media screen and (max-width: 320px) {
+  .content__profile {
+    margin-top: 42px;
+    flex-direction: column;
+    gap: 36px;
+  }
+
   .content__elements {
     margin-top: 36px;
   }
