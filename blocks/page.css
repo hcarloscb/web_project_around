@@ -14,7 +14,7 @@ body {
 .page__header {
   max-width: 880px;
   min-width: 320px;
-  width: 880px;
+  width: 100%;
   border-bottom: 1px solid #545454;
   padding: 45px 0 41px 0;
 }
