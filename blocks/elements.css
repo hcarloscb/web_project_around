@@ -34,3 +34,12 @@
   max-width: 21px;
   align-self: center;
 }
+
+.elements__like:hover {
+  opacity: 0.5;
+}
+
+.elements__like:active {
+  background-image: url(../images/elements__like-active.svg);
+  opacity: 1;
+}

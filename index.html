@@ -27,24 +27,24 @@
             <div class="profile__info">
               <div class="profile__container">
                 <h2 class="profile__name">Jacques Cousteau</h2>
-                <div class="profile__edit-button">
+                <a class="profile__edit-button" href="#">
                   <img
                     class="profile__edit-image"
                     src="./images/profile__edit-pencil.svg"
                     alt="edit"
                   />
-                </div>
+                </a>
               </div>
               <p class="profile__occupation">Explorador</p>
             </div>
           </div>
-          <div class="profile__add-button">
+          <a class="profile__add-button" href="#">
             <img
               src="./images/profile__add.svg"
               alt="add"
               class="profile__add-image"
             />
-          </div>
+          </a>
         </section>
         <section class="elements content__elements">
           <div class="elements__card">
@@ -55,11 +55,13 @@
             />
             <div class="elements__card-info">
               <p class="elements__text">Valle de Yosemite</p>
-              <img
-                src="./images/elements__like.svg"
-                alt="like"
-                class="elements__like"
-              />
+              <a href="#" class="elements__like">
+                <img
+                  src="./images/elements__like.svg"
+                  alt="like"
+                  class="elements__like-img"
+                />
+              </a>
             </div>
           </div>
           <div class="elements__card">
@@ -70,11 +72,13 @@
             />
             <div class="elements__card-info">
               <p class="elements__text">Lago Louise</p>
-              <img
-                src="./images/elements__like.svg"
-                alt="like"
-                class="elements__like"
-              />
+              <a href="#" class="elements__like">
+                <img
+                  src="./images/elements__like.svg"
+                  alt="like"
+                  class="elements__like-img"
+                />
+              </a>
             </div>
           </div>
           <div class="elements__card">
@@ -85,11 +89,13 @@
             />
             <div class="elements__card-info">
               <p class="elements__text">Montañas Calvas</p>
-              <img
-                src="./images/elements__like.svg"
-                alt="like"
-                class="elements__like"
-              />
+              <a href="#" class="elements__like">
+                <img
+                  src="./images/elements__like.svg"
+                  alt="like"
+                  class="elements__like-img"
+                />
+              </a>
             </div>
           </div>
           <div class="elements__card">
@@ -100,11 +106,13 @@
             />
             <div class="elements__card-info">
               <p class="elements__text">Latemar</p>
-              <img
-                src="./images/elements__like.svg"
-                alt="like"
-                class="elements__like"
-              />
+              <a href="#" class="elements__like">
+                <img
+                  src="./images/elements__like.svg"
+                  alt="like"
+                  class="elements__like-img"
+                />
+              </a>
             </div>
           </div>
           <div class="elements__card">
@@ -115,11 +123,13 @@
             />
             <div class="elements__card-info">
               <p class="elements__text">Vanois National Park</p>
-              <img
-                src="./images/elements__like.svg"
-                alt="like"
-                class="elements__like"
-              />
+              <a href="#" class="elements__like">
+                <img
+                  src="./images/elements__like.svg"
+                  alt="like"
+                  class="elements__like-img"
+                />
+              </a>
             </div>
           </div>
           <div class="elements__card">
@@ -130,11 +140,13 @@
             />
             <div class="elements__card-info">
               <p class="elements__text">Lago di Braies</p>
-              <img
-                src="./images/elements__like.svg"
-                alt="like"
-                class="elements__like"
-              />
+              <a href="#" class="elements__like">
+                <img
+                  src="./images/elements__like.svg"
+                  alt="like"
+                  class="elements__like-img"
+                />
+              </a>
             </div>
           </div>
         </section>
@@ -142,6 +154,35 @@
       <footer class="footer page__footer">
         <p class="footer__copy">&copy; 2025 Carlos Collado - Around The U.S.</p>
       </footer>
+      <section class="popup page__popup">
+        <div class="popup__container">
+          <h2 class="popup__title">Editar perfil</h2>
+          <form class="form popup__form">
+            <fieldset class="form__fieldset">
+              <input
+                class="form__input"
+                type="text"
+                name="nombre"
+                id="input-nombre"
+                placeholder="Nombre"
+              />
+              <input
+                class="form__input"
+                type="text"
+                name="aboutme"
+                id="input-aboutme"
+                placeholder="Acerca de mí"
+              />
+            </fieldset>
+            <button type="submit" class="form__button">Guardar</button>
+          </form>
+          <img
+            src="./images/popup__close.svg"
+            alt="Close"
+            class="popup__close"
+          />
+        </div>
+      </section>
     </div>
   </body>
 </html>

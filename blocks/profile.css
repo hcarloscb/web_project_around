@@ -25,6 +25,7 @@
   font-style: normal;
   font-size: 42px;
   font-weight: 500;
+  width: auto;
 }
 
 .profile__occupation {
@@ -54,8 +55,9 @@
 
 .profile__add-button {
   border: 1px solid #fff;
+  max-width: 148px;
+  width: 100%;
   height: 48px;
-  width: 148px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -104,7 +106,8 @@
   }
 
   .profile__add-button {
-    width: 280px;
+    max-width: 280px;
+    width: 100%;
   }
 
   .profile__add-button:hover {
