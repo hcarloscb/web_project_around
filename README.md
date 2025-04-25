@@ -22,4 +22,4 @@ Este proyecto es una página web donde la interfaz simula un perfil de usuario d
 
 ## Enlace a GitHub Pages
 
-URL: https://hcarloscb.github.io/web_project_around/
+URL: https://hcarloscb.github.io/web_project_around/index.html
