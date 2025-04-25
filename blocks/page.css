@@ -42,10 +42,9 @@ body {
   height: 100%;
   background: #000;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  /* display: none; */
 }
 
 .page__popup_popup_opened {
