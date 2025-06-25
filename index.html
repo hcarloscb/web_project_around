@@ -46,110 +46,7 @@
             />
           </a>
         </section>
-        <section class="elements content__elements">
-          <div class="elements__card">
-            <img
-              class="elements__image"
-              src="./images/elements__yosemite.png"
-              alt="Yosemite"
-            />
-            <div class="elements__card-info">
-              <p class="elements__text">Valle de Yosemite</p>
-              <a href="#" class="elements__like">
-                <img
-                  src="./images/elements__like.svg"
-                  alt="like"
-                  class="elements__like-img"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="elements__card">
-            <img
-              class="elements__image"
-              src="./images/elements__louise.png"
-              alt="Lago_Louise"
-            />
-            <div class="elements__card-info">
-              <p class="elements__text">Lago Louise</p>
-              <a href="#" class="elements__like">
-                <img
-                  src="./images/elements__like.svg"
-                  alt="like"
-                  class="elements__like-img"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="elements__card">
-            <img
-              class="elements__image"
-              src="./images/elements__calvas.png"
-              alt="Calvas"
-            />
-            <div class="elements__card-info">
-              <p class="elements__text">Montañas Calvas</p>
-              <a href="#" class="elements__like">
-                <img
-                  src="./images/elements__like.svg"
-                  alt="like"
-                  class="elements__like-img"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="elements__card">
-            <img
-              class="elements__image"
-              src="./images/elements__latemar.png"
-              alt="Latemar"
-            />
-            <div class="elements__card-info">
-              <p class="elements__text">Latemar</p>
-              <a href="#" class="elements__like">
-                <img
-                  src="./images/elements__like.svg"
-                  alt="like"
-                  class="elements__like-img"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="elements__card">
-            <img
-              class="elements__image"
-              src="./images/elements__vanois.png"
-              alt="Vanois"
-            />
-            <div class="elements__card-info">
-              <p class="elements__text">Vanois National Park</p>
-              <a href="#" class="elements__like">
-                <img
-                  src="./images/elements__like.svg"
-                  alt="like"
-                  class="elements__like-img"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="elements__card">
-            <img
-              class="elements__image"
-              src="./images/elements__braies.png"
-              alt="Lake_Braies"
-            />
-            <div class="elements__card-info">
-              <p class="elements__text">Lago di Braies</p>
-              <a href="#" class="elements__like">
-                <img
-                  src="./images/elements__like.svg"
-                  alt="like"
-                  class="elements__like-img"
-                />
-              </a>
-            </div>
-          </div>
-        </section>
+        <section class="elements content__elements"></section>
       </main>
       <footer class="footer page__footer">
         <p class="footer__copy">&copy; 2025 Carlos Collado - Around The U.S.</p>
@@ -184,6 +81,23 @@
         </div>
       </section>
     </div>
+    <template id="card-template">
+      <div class="elements__card">
+        <div class="elements__image-container">
+          <img class="elements__image" src="" alt="" />
+        </div>
+        <div class="elements__card-info">
+          <p class="elements__text"></p>
+          <a href="/" class="elements__like">
+            <img
+              src="./images/elements__like.svg"
+              alt="like"
+              class="elements__like-img"
+            />
+          </a>
+        </div>
+      </div>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
