@@ -7,11 +7,19 @@ let profileOccupation = profile.querySelector(".profile__occupation");
 let editButton = profile.querySelector(".profile__edit-button");
 let addButton = profile.querySelector(".profile__add-button");
 
-// popeditprofile variables
-
 let elementsContainer = container.querySelector(".content__elements");
 
-function addCard(name, link, position = "append") {
+function deleteCard(item) {
+  const deleteButton = item.querySelector(".elements__btn-delete");
+  deleteButton.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    item.remove();
+  });
+}
+
+/* Función que añade nuevas tarjetas al grid,
+ya sea al incio o al final dependiendo del parametro especificado.*/
+function newCard(name, link, position = "append") {
   const cardsTemplate = document.querySelector("#card-template").content;
   const cardElement = cardsTemplate
     .querySelector(".elements__card")
@@ -22,6 +30,8 @@ function addCard(name, link, position = "append") {
   position === "append"
     ? elementsContainer.append(cardElement)
     : elementsContainer.prepend(cardElement);
+
+  deleteCard(cardElement);
 }
 
 const initialCards = [
@@ -52,7 +62,7 @@ const initialCards = [
 ];
 
 initialCards.forEach(({ name, link }) => {
-  addCard(name, link);
+  newCard(name, link);
 });
 
 //Funciones popup
@@ -106,7 +116,7 @@ let formCreateSubmit = popupNewPlace.querySelector(".popup__form");
 
 function handleNewPlaceFormSubmit(evt) {
   evt.preventDefault();
-  addCard(titleInput.value, linkInput.value, "prepend");
+  newCard(titleInput.value, linkInput.value, "prepend");
   titleInput.value = null;
   linkInput.value = null;
   closeP(popupNewPlace);
