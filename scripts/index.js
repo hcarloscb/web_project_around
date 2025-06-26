@@ -9,14 +9,6 @@ let addButton = profile.querySelector(".profile__add-button");
 
 let elementsContainer = container.querySelector(".content__elements");
 
-function deleteCard(item) {
-  const deleteButton = item.querySelector(".elements__btn-delete");
-  deleteButton.addEventListener("click", (evt) => {
-    evt.preventDefault();
-    item.remove();
-  });
-}
-
 /* Función que añade nuevas tarjetas al grid,
 ya sea al incio o al final dependiendo del parametro especificado.*/
 function newCard(name, link, position = "append") {
@@ -27,11 +19,24 @@ function newCard(name, link, position = "append") {
   cardElement.querySelector(".elements__image").setAttribute("alt", name);
   cardElement.querySelector(".elements__text").textContent = name;
   cardElement.querySelector(".elements__image").setAttribute("src", link);
+
+  cardElement
+    .querySelector(".elements__like")
+    .addEventListener("click", function (evt) {
+      evt.preventDefault();
+      evt.target.classList.toggle("elements__like_active");
+    });
+
+  cardElement
+    .querySelector(".elements__btn-delete")
+    .addEventListener("click", (evt) => {
+      evt.preventDefault();
+      cardElement.remove();
+    });
+
   position === "append"
     ? elementsContainer.append(cardElement)
     : elementsContainer.prepend(cardElement);
-
-  deleteCard(cardElement);
 }
 
 const initialCards = [
