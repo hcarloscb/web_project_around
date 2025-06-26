@@ -24,7 +24,11 @@
   font-size: 14px;
 }
 
-.form__input[id="input-nombre"] {
+/* .form__input[id="input-nombre"] {
+  margin-bottom: 29.74px;
+} */
+
+.form__input:first-of-type {
   margin-bottom: 29.74px;
 }
 
