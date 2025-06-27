@@ -23,14 +23,30 @@
 }
 
 .popup__close {
-  width: 40px;
+  width: 32px;
   position: absolute;
-  top: -40px;
-  right: -40px;
+  top: -37px;
+  right: -37px;
 }
 
 .popup__close:hover {
   opacity: 0.6;
+}
+
+.popup__view-container {
+  position: relative;
+}
+
+.popup__view-image {
+  max-width: 75vw;
+  max-height: 75vh;
+  display: block;
+}
+
+.popup__view-title {
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  line-height: 15px;
 }
 
 @media screen and (max-width: 320px) {
@@ -49,9 +65,14 @@
   }
 
   .popup__close {
-    width: 26px;
-    top: -40px;
+    width: 21px;
+    top: -42px;
     right: 0;
+  }
+
+  .popup__close_position_corner {
+    top: -24px;
+    right: -24px;
   }
 
   .popup__close:hover {
