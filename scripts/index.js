@@ -1,33 +1,13 @@
-let container = document.querySelector(".content");
+const container = document.querySelector(".content");
 
-let profile = container.querySelector(".content__profile");
-let profileName = profile.querySelector(".profile__name");
-let profileOccupation = profile.querySelector(".profile__occupation");
+const profile = container.querySelector(".content__profile");
+const profileName = profile.querySelector(".profile__name");
+const profileOccupation = profile.querySelector(".profile__occupation");
 
-let editButton = profile.querySelector(".profile__edit-button");
-let addButton = profile.querySelector(".profile__add-button");
+const editButton = profile.querySelector(".profile__edit-button");
+const addButton = profile.querySelector(".profile__add-button");
 
-let elementsContainer = container.querySelector(".content__elements");
-
-// Popup vista de imagen
-let popupViewImage = document.querySelector("#popup-viewimage");
-let closeViewImage = popupViewImage.querySelector(".popup__close");
-
-// Función que permite abrir y cerrar la visualización de una imagen
-function viewImage(link, title) {
-  let image = popupViewImage.querySelector(".popup__view-image");
-  let name = popupViewImage.querySelector(".popup__view-title");
-  image.setAttribute("src", link);
-  image.setAttribute("alt", title);
-  name.textContent = title;
-
-  closeViewImage.addEventListener("click", () => {
-    closePopup(popupViewImage);
-    image.setAttribute("src", "");
-    image.setAttribute("alt", "");
-    name.textContent = "";
-  });
-}
+const elementsContainer = container.querySelector(".content__elements");
 
 /* 
 Función que añade nuevas tarjetas al grid,
@@ -103,21 +83,21 @@ initialCards.forEach(({ name, link }) => {
 
 //Funciones popup
 
-function openPopup(popupName) {
-  popupName.classList.add("page__popup_popup_opened");
+function openPopup(popupElement) {
+  popupElement.classList.add("page__popup_popup_opened");
 }
 
-function closePopup(popupName) {
-  popupName.classList.remove("page__popup_popup_opened");
+function closePopup(popupElement) {
+  popupElement.classList.remove("page__popup_popup_opened");
 }
 
 // popup Editar perfil
 
-let popupEditProfile = document.querySelector("#popup-editprofile");
-let closeEditProfile = popupEditProfile.querySelector(".popup__close");
+const popupEditProfile = document.querySelector("#popup-editprofile");
+const closeEditProfile = popupEditProfile.querySelector(".popup__close");
 
-let nameInput = popupEditProfile.querySelector("#input-nombre");
-let jobInput = popupEditProfile.querySelector("#input-aboutme");
+const nameInput = popupEditProfile.querySelector("#input-nombre");
+const jobInput = popupEditProfile.querySelector("#input-aboutme");
 
 editButton.addEventListener("click", () => {
   openPopup(popupEditProfile);
@@ -127,7 +107,7 @@ editButton.addEventListener("click", () => {
 
 closeEditProfile.addEventListener("click", () => closePopup(popupEditProfile));
 
-let formSaveInfo = popupEditProfile.querySelector(".popup__form");
+const profileForm = popupEditProfile.querySelector(".popup__form");
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -135,20 +115,20 @@ function handleProfileFormSubmit(evt) {
   profileOccupation.textContent = jobInput.value;
   closePopup(popupEditProfile);
 }
-formSaveInfo.addEventListener("submit", handleProfileFormSubmit);
+profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 //popup Nuevo lugar
 
-let popupNewPlace = document.querySelector("#popup-newplace");
-let closeNewPlace = popupNewPlace.querySelector(".popup__close");
+const popupNewPlace = document.querySelector("#popup-newplace");
+const closeNewPlace = popupNewPlace.querySelector(".popup__close");
 
-let titleInput = popupNewPlace.querySelector("#input-titulo");
-let linkInput = popupNewPlace.querySelector("#input-enlace");
+const titleInput = popupNewPlace.querySelector("#input-titulo");
+const linkInput = popupNewPlace.querySelector("#input-enlace");
 
 addButton.addEventListener("click", () => openPopup(popupNewPlace));
 closeNewPlace.addEventListener("click", () => closePopup(popupNewPlace));
 
-let formCreateSubmit = popupNewPlace.querySelector(".popup__form");
+const newPlaceForm = popupNewPlace.querySelector(".popup__form");
 
 function handleNewPlaceFormSubmit(evt) {
   evt.preventDefault();
@@ -158,4 +138,24 @@ function handleNewPlaceFormSubmit(evt) {
   closePopup(popupNewPlace);
 }
 
-formCreateSubmit.addEventListener("submit", handleNewPlaceFormSubmit);
+newPlaceForm.addEventListener("submit", handleNewPlaceFormSubmit);
+
+// Popup vista de imagen
+const popupViewImage = document.querySelector("#popup-viewimage");
+const closeViewImage = popupViewImage.querySelector(".popup__close");
+
+// Función que permite abrir y cerrar la visualización de una imagen
+function viewImage(link, title) {
+  const popupImage = popupViewImage.querySelector(".popup__view-image");
+  const popupName = popupViewImage.querySelector(".popup__view-title");
+  popupImage.setAttribute("src", link);
+  popupImage.setAttribute("alt", title);
+  popupName.textContent = title;
+
+  closeViewImage.addEventListener("click", () => {
+    closePopup(popupViewImage);
+    popupImage.setAttribute("src", "");
+    popupImage.setAttribute("alt", "");
+    popupName.textContent = "";
+  });
+}
