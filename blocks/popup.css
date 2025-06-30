@@ -49,7 +49,7 @@
   line-height: 15px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
   .popup__container {
     max-width: 282px;
     padding: 25px 22px;
