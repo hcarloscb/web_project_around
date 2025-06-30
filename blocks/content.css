@@ -14,7 +14,13 @@
   justify-items: center;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 879px) {
+  .content__profile {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
   .content__profile {
     margin-top: 42px;
     flex-direction: column;

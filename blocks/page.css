@@ -51,7 +51,13 @@ body {
   display: flex;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 879px) {
+  .page__header {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 580px) {
   .page__header {
     padding: 28px 0 32px 27px;
     max-width: 320px;
