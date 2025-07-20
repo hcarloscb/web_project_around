@@ -75,3 +75,9 @@
   background-image: url(../images/elements__like-active.svg);
   opacity: 1;
 }
+
+@media screen and (max-width: 879px) {
+  .elements__like:hover {
+    opacity: 1;
+  }
+}

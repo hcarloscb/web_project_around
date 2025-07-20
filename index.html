@@ -65,26 +65,36 @@
       <section class="popup page__popup" id="popup-editprofile">
         <div class="popup__container">
           <h2 class="popup__title">Editar perfil</h2>
-          <form class="form popup__form">
+          <form class="form popup__form" novalidate>
             <fieldset class="form__fieldset">
-              <input
-                class="form__input"
-                type="text"
-                name="nombre"
-                id="input-nombre"
-                placeholder="Nombre"
-                required
-              />
-              <input
-                class="form__input"
-                type="text"
-                name="aboutme"
-                id="input-aboutme"
-                placeholder="Acerca de mí"
-                required
-              />
+              <label class="form__field">
+                <input
+                  class="form__input"
+                  type="text"
+                  name="names"
+                  id="name-input"
+                  placeholder="Nombre"
+                  required
+                  minlength="2"
+                  maxlength="40"
+                />
+                <span class="form__input-error name-input-error"></span>
+              </label>
+              <label class="form__field">
+                <input
+                  class="form__input"
+                  type="text"
+                  name="aboutme"
+                  id="aboutme-input"
+                  placeholder="Acerca de mí"
+                  required
+                  minlength="2"
+                  maxlength="200"
+                />
+                <span class="form__input-error aboutme-input-error"></span>
+              </label>
+              <button type="submit" class="form__button">Guardar</button>
             </fieldset>
-            <button type="submit" class="form__button">Guardar</button>
           </form>
           <img
             src="./images/popup__close.svg"
@@ -96,26 +106,36 @@
       <section class="popup page__popup" id="popup-newplace">
         <div class="popup__container">
           <h2 class="popup__title">Nuevo Lugar</h2>
-          <form class="form popup__form">
+          <form class="form popup__form" novalidate>
             <fieldset class="form__fieldset">
-              <input
-                class="form__input"
-                type="text"
-                name="titulo"
-                id="input-titulo"
-                placeholder="Título"
-                required
-              />
-              <input
-                class="form__input"
-                type="text"
-                name="enlace"
-                id="input-enlace"
-                placeholder="Enlace a la imagen"
-                required
-              />
+              <label class="form__field"
+                ><input
+                  class="form__input"
+                  type="text"
+                  name="titulo"
+                  id="title-input"
+                  placeholder="Título"
+                  minlength="2"
+                  maxlength="30"
+                  required
+                />
+                <span class="form__input-error title-input-error"></span>
+              </label>
+
+              <label class="form__field"
+                ><input
+                  class="form__input"
+                  type="url"
+                  name="enlace"
+                  id="link-input"
+                  placeholder="Enlace a la imagen"
+                  required
+                />
+                <span class="form__input-error link-input-error"></span>
+              </label>
+
+              <button type="submit" class="form__button">Crear</button>
             </fieldset>
-            <button type="submit" class="form__button">Crear</button>
           </form>
           <img
             src="./images/popup__close.svg"
@@ -151,6 +171,7 @@
         </div>
       </div>
     </template>
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/validate.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

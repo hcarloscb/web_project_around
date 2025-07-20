@@ -55,6 +55,11 @@ body {
   .page__header {
     padding-left: 50px;
   }
+
+  .page__footer {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 @media screen and (max-width: 580px) {
