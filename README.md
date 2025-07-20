@@ -28,6 +28,8 @@ Este proyecto es una página web donde la interfaz simula un perfil de usuario d
 - Diseño completamente responsive para dispositivos móviles y escritorio.
 - Interacciones visuales mediante efectos hover y transiciones suaves.
 - Envío de formularios posible también con la tecla Enter desde cualquier campo activo.
+- Los formularios son validados manualmente y muestran errores en input invalidos.
+- Utiliza manejo de eventos para crear y eliminar controladores cuando se requieren.
 
 ## 🛠️ Tecnologías utilizadas
 
