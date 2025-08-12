@@ -63,4 +63,4 @@ Like, eliminar y vista ampliada de imagen.
 
 ## 🌐 GitHub Pages
 
-URL: https://hcarloscb.github.io/web_project_around/index.html
+URL: https://hcarloscb.github.io/web_project_around/src/index.html
