@@ -1,4 +1,4 @@
-class FormValidator {
+export default class FormValidator {
   constructor(formElement) {
     this._config = {
       popupSelector: ".popup",
@@ -96,5 +96,3 @@ class FormValidator {
     buttonElement.classList.add(this._config.inactiveButtonClass);
   }
 }
-
-export { FormValidator };
