@@ -49,6 +49,10 @@
   line-height: 15px;
 }
 
+.popup__form_margin-noform {
+  margin: 0;
+}
+
 @media screen and (max-width: 580px) {
   .popup__container {
     max-width: 282px;

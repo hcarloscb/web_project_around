@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -22,11 +22,19 @@
         <section class="profile content__profile">
           <div class="profile__avatar-info">
             <div class="profile__avatar">
-              <div class="profile__elipse"></div>
+              <img class="profile__elipse" />
+              <div class="profile__edit-avatar">
+                <a href="#" class="profile__button-edit"
+                  ><img
+                    src="../images/avatar__edit-pencil.svg"
+                    alt="pencil"
+                    class="profile__edit-icon"
+                /></a>
+              </div>
             </div>
             <div class="profile__info">
               <div class="profile__container">
-                <h2 class="profile__name">Jacques Cousteau</h2>
+                <h2 class="profile__name"></h2>
                 <a class="profile__edit-button" href="#">
                   <img
                     class="profile__edit-image"
@@ -35,7 +43,7 @@
                   />
                 </a>
               </div>
-              <p class="profile__occupation">Explorador</p>
+              <p class="profile__occupation"></p>
             </div>
           </div>
           <a class="profile__add-button" href="#">
@@ -144,6 +152,50 @@
           />
         </div>
       </section>
+      <section class="popup page__popup" id="popup-deletecard">
+        <div class="popup__container">
+          <h2 class="popup__title">¿Estás seguro/a?</h2>
+          <form class="form popup__form popup__form_margin-noform">
+            <button
+              type="submit"
+              class="form__button form__button_margin-noform"
+            >
+              Sí
+            </button>
+          </form>
+          <img
+            src="../images/popup__close.svg"
+            alt="Close"
+            class="popup__close"
+          />
+        </div>
+      </section>
+      <section class="popup page__popup" id="popup-editavatar">
+        <div class="popup__container">
+          <h2 class="popup__title">Cambiar foto de perfil</h2>
+          <form class="form popup__form" novalidate>
+            <fieldset class="form__fieldset">
+              <label class="form__field">
+                <input
+                  type="url"
+                  class="form__input"
+                  name="avatarurl"
+                  id="avatar-input"
+                  placeholder="Enlace a la imagen"
+                  required
+                />
+                <span class="form__input-error avatar-input-error"></span>
+              </label>
+              <button type="submit" class="form__button">Guardar</button>
+            </fieldset>
+          </form>
+          <img
+            src="../images/popup__close.svg"
+            alt="Close"
+            class="popup__close"
+          />
+        </div>
+      </section>
     </div>
     <template id="card-template">
       <div class="elements__card">
@@ -172,11 +224,13 @@
       </div>
     </template>
     <script type="module" src="./pages/index.js"></script>
+    <script type="module" src="./components/Api.js"></script>
     <script type="module" src="./components/FormValidator.js"></script>
     <script type="module" src="./components/Card.js"></script>
     <script type="module" src="./components/Popup.js"></script>
     <script type="module" src="./components/PopupWithForm.js"></script>
     <script type="module" src="./components/PopupWithImage.js"></script>
+    <script type="module" src="./components/PopupWithConfirmation.js"></script>
     <script type="module" src="./components/Section.js"></script>
     <script type="module" src="./components/UserInfo.js"></script>
   </body>

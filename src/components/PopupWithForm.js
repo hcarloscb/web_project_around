@@ -7,6 +7,7 @@ export default class PopupWithForm extends Popup {
     this._handleResetValidation = handleResetValidation;
     this._form = this._popupElement.querySelector(".popup__form");
     this.inputList = Array.from(this._form.querySelectorAll(".form__input"));
+    this._submitButton = this._form.querySelector(".form__button");
 
     this._submitHandler = (evt) => {
       this._handleFormSubmit(evt, this._getInputValues());
@@ -37,5 +38,13 @@ export default class PopupWithForm extends Popup {
       this._form.reset();
     }
     this._handleResetValidation();
+  }
+
+  renderLoading(isloading) {
+    if (isloading) {
+      this._submitButton.textContent = "Guardando...";
+    } else {
+      this._submitButton.textContent = "Guardar";
+    }
   }
 }

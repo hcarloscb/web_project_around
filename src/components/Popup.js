@@ -22,7 +22,7 @@ export default class Popup {
   _setEventListeners() {
     this._popupElement.addEventListener(
       "mousedown",
-      this._handleClosePopupBound
+      this._handleClosePopupBound,
     );
     document.addEventListener("keydown", this._handleEscCloseBound);
   }
@@ -30,7 +30,7 @@ export default class Popup {
   _removeEventListeners() {
     this._popupElement.removeEventListener(
       "mousedown",
-      this._handleClosePopupBound
+      this._handleClosePopupBound,
     );
     document.removeEventListener("keydown", this._handleEscCloseBound);
   }
