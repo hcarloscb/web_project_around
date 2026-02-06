@@ -68,6 +68,10 @@
     margin-top: 76px;
   }
 
+  .popup__form_margin-noform {
+    margin: 0;
+  }
+
   .popup__close {
     width: 21px;
     top: -42px;
